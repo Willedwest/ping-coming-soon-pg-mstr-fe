@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: 'Libre Franklin';
+}
+
+:root {
+  /* Primary colors */
+  --Blue: hsl(223, 87%, 63%);
+
+  /* Secondary colors  */
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+  
+  /* Neutral colors  */
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+}
+
+main {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.board {
+  width: 100%;
+}
+
+.notice {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.notice > h1 {
+  color: var(--Gray);
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.notice > h1 > span {
+  font-size: 2rem;
+  color: var(--Very-Dark-Blue);
+  font-weight: 700;
+}
+
+.notice > p {
+  color: var(--Gray);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.alert-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 4rem;
+  gap: 1rem;
+  position: relative;
+}
+
+.alert-me > input {
+  width: 70%;
+  padding: 0.7rem 2rem;
+  border-radius: 4rem;
+  border: 1px solid var(--Pale-Blue);
+  outline: none;
+} 
+
+.alert-me ::placeholder {
+  color: var(--Pale-Blue);
+  font-size: 0.9rem;
+}
+
+.alert-me > button {
+  padding: 0.8rem 2rem;
+  border-radius: 4rem;
+  width: 30%;
+  border: none;
+  color: #fff;
+  background-color: var(--Blue);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.8rem;
+  box-shadow: 0 10px 10px 0 hsl(223, 87%, 63%, 0.2);
+}
+
+.alert-me button:hover {
+  background-color: hsla(223, 87%, 63%, 0.69);
+}
+
+ul {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+ul li {
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid var(--Blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+ul li a {
+  color: var(--Blue);
+  text-decoration: none;
+}
+
+ul li:hover {
+  background-color: var(--Blue);
+  color: #fff;
+}
+
+main > span {
+  color: var(--Gray);
+  font-size: 0.8rem;
+}
+
+.errorMsg {
+  position: absolute;
+  left: 0;
+  bottom: -25px;
+  font-style: italic;
+  font-size: 0.8rem;
+  padding-left: 2rem;
+  color: var(--Light-Red);
+}
+
+.errorMsg {
+  display: none;
+}
+
+.active .errorMsg {
+  display: block;
+}
+
+.active input {
+  border: 2px solid var(--Light-Red);
+}
+
+.active ::placeholder {
+  color: hsla(210, 32%, 12%, 0.687);
+  font-weight: 600;
+}
+
+footer {
+  display: flex;
+  gap: 2rem;
+}
+
+footer > p {
+  font-size: 11px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+footer > a {
+  color: hsl(228, 45%, 44%);
+}
+
+.color a {
+  color: #fff;
+}
+
+
+
+
+@media (max-width: 650px) {
+  .alert-me {
+    flex-direction: column;
+  }
+
+  .alert-me > input {
+    width: 100%;
+  }
+
+  .alert-me > button {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .active .errorMsg {
+    bottom: 80px;
+    left: 35px;
+  }
+
+  .active input {
+    margin-bottom: 1.8rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
